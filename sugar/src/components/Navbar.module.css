@@ -1,0 +1,32 @@
+.logo {
+  width: 146px;
+  height: 40px;
+}
+.Navbar {
+  display: flex;
+  height: 72.23 px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  justify-content: space-around;
+}
+.searchbar {
+  display: flex;
+  height: 40px;
+  width: 670px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: none;
+  justify-content: space-between;
+}
+.searchInput {
+  width: 506px;
+  height: 40px;
+}
+.discount{
+    width: 18px;
+    height: 18px;
+}
+.tributton{
+    display: flex;
+    gap: 10px;
+}

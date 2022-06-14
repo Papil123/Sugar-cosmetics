@@ -1,0 +1,22 @@
+.footer {
+  height: 650px;
+  width: 100%;
+  background-color: black;
+  color: #FFFFFF;
+}
+.footer>img{
+  height: 120px;
+  width: 120px;
+  margin: auto;
+}
+.socialIcons{
+   width: 250px;
+   justify-content: space-around;
+   display: flex;
+   margin: auto;
+   margin-top: 20px;
+}
+.split{
+  height: 110px;
+  width: 600px;
+}

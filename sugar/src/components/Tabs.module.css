@@ -1,0 +1,11 @@
+.tabs{
+    display: flex;
+}
+
+.tabs>div{
+    width: 100px;
+    height: 51px;
+    padding: 16px;
+    font-size: 13px;
+
+}
