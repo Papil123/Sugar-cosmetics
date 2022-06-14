@@ -1,0 +1,23 @@
+.heads {
+  font-size: 32px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.second {
+  font-family: "Quicksand", sans-serif;
+  margin-top: 30px;
+  font-size: 32 px;
+  font-weight: lighter;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+  margin: auto;
+}

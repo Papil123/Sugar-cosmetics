@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Tabs.module.css";
 
+// import { Link } from "react-router-dom";
+
 const Tabs = () => {
-  const [hover, setHover] = useState(false);
+  // const [hover, setHover] = useState(false);
   return (
     <div className={styles.tabs}>
-      <div  >
-        <p >MAKEUP</p>
-        <div style={{ display: hover ? "block" : "none" }}> hooorrrayay</div>
+      <div>
+       
       </div>
       <div>
         <p>BRUSHES</p>

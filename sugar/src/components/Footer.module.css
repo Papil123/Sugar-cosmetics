@@ -2,6 +2,7 @@
   height: 650px;
   width: 100%;
   background-color: black;
+  font-family: 'Poppins', sans-serif;
   color: #FFFFFF;
 }
 .footer>img{
@@ -15,8 +16,60 @@
    display: flex;
    margin: auto;
    margin-top: 20px;
+   margin-bottom: 50px;
 }
 .split{
   height: 110px;
-  width: 600px;
+  
+  margin-top: 100px;
+  display: flex;
+  margin-left: 120px;
+  justify-content: space-between;
+}
+.split>div{
+  width: 650px;
+  text-align: left;
+}
+.appstore{
+  display: flex;
+
+}
+.appstore>img{
+  width: 100px;
+  height: 30px;
+}
+
+.info{
+  text-align: left;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.info>div{
+  margin-top: 30px;
+  color: #999999;
+  display: flex;
+  gap: 100px;
+}
+
+.touch{
+  text-align: left;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.touch>div{
+  text-align: left;
+  display: flex;
+  /* margin-left: 120px; */
+  margin-top: 20px;
+}
+
+.touch>div>div{
+  width: 250px;
+}
+
+.touch>div>div>a:last-child{
+  color: #999999;
+}
+.grey{
+  color: #999999;
 }
