@@ -12,6 +12,8 @@ import {
   DrawerCloseButton,
   Button,
   Input,
+  InputGroup,
+  InputLeftAddon,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 
@@ -61,6 +63,7 @@ const Navbar = () => {
             Login/Register
           </Button>
           <Drawer
+            size='lg'
             isOpen={isOpen}
             placement="right"
             onClose={onClose}
@@ -69,12 +72,17 @@ const Navbar = () => {
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader fontWeight='light' >
-                <i class="fa-solid fa-mobile-screen"> </i> Login/Sign-up
+              <DrawerHeader fontWeight="light">
+                <i class="fa-solid fa-mobile-screen"> </i> Login/Sign-up Using
+                phone
               </DrawerHeader>
 
               <DrawerBody>
-                <Input placeholder="Type here..." />
+                <InputGroup width='500px'>
+                  <InputLeftAddon children="+91" />
+                  <Input type="tel" placeholder="phone number" />
+                  <Button width='150px' backgroundColor='#FC2779' marginLeft='20px' >Request OTP</Button>
+                </InputGroup>
               </DrawerBody>
 
               <DrawerFooter>
@@ -87,7 +95,7 @@ const Navbar = () => {
           </Drawer>
         </>
       </div>
-      <div className={styles.tributton} >
+      <div className={styles.tributton}>
         <p>
           <Link to="/wishlist">
             <i class="fa-solid fa-heart"></i>
@@ -108,7 +116,6 @@ const Navbar = () => {
         </p>
       </div>
     </div>
-    
   );
 };
 

@@ -16,7 +16,7 @@ import { useEffect } from "react";
 export const Login = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  useEffect(() => {
+  useEffect((onOpen) => {
    const open = ()=> onOpen();
    open()
   },[]);

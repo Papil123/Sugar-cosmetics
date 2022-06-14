@@ -35,7 +35,7 @@ const Home = () => {
   ];
   return (
     <div>
-      <Slideshow colors={colo} delay={delay} />
+      <Slideshow colors={colors} delay={delay} />
       <div className={styles.heads}>
         <h2>REFER YOUR FRIENDS</h2>
         <img src="https://d32baadbbpueqt.cloudfront.net/f53f2d67-ea43-4959-abca-eba6d87fd598.jpg" />
@@ -47,9 +47,9 @@ const Home = () => {
           height="331"
           src="https://www.youtube.com/embed/VXMBlOqZJbI"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       </div>
       <div className={styles.second}>
