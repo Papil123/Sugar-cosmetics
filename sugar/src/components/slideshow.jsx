@@ -21,7 +21,7 @@ const Slideshow = (props) => {
         ),
       delay
     );
-    console.log(colors, delay);
+    // console.log(colors, delay);
     return () => {
       resetTimeout();
     };

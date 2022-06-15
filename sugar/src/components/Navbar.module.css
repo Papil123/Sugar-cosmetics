@@ -30,3 +30,8 @@
     display: flex;
     gap: 10px;
 }
+
+.loginhead{
+  margin-top: 30px;
+  font-weight: bolder;
+}

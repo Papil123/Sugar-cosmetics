@@ -1,7 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import styles from "./Navbar.module.css";
-
+import Login from "../pages/Login";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,Portal} from '@chakra-ui/react'
 import {
   Drawer,
   DrawerBody,
@@ -16,9 +21,13 @@ import {
   InputLeftAddon,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
+import Register from "../pages/Register";
+import { AuthContext } from "../contex/Authcontex";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const {isAuth,logout} = useContext(AuthContext)
+  console.log(isAuth)
   const btnRef = React.useRef();
 
   return (
@@ -52,18 +61,32 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <i class="fa-solid fa-user"></i>
         <>
-          <Button
+        <div>{isAuth ===true ? <Button ref={btnRef}
+            border="none"
+            backgroundColor="white"
+           ><i class="fa-solid fa-user"></i><Menu>
+            <MenuButton>Hello Papil</MenuButton>
+            <Portal>
+              <MenuList fontSize='13px'>
+                <MenuItem><Button  onClick={logout} >Logout</Button></MenuItem>
+               
+                
+              </MenuList>
+            </Portal>
+          </Menu></Button>:<Button
             ref={btnRef}
             border="none"
             backgroundColor="white"
             onClick={onOpen}
           >
-            Login/Register
-          </Button>
+            <i class="fa-solid fa-user"></i>
+           <Link to='login' > Login/Register</Link> 
+          </Button> 
+          }</div>
+          
           <Drawer
-            size='lg'
+            size="lg"
             isOpen={isOpen}
             placement="right"
             onClose={onClose}
@@ -73,23 +96,29 @@ const Navbar = () => {
             <DrawerContent>
               <DrawerCloseButton />
               <DrawerHeader fontWeight="light">
-                <i class="fa-solid fa-mobile-screen"> </i> Login/Sign-up Using
-                phone
+                <h1 style={{ fontWeight: "bold", color: "pink" }}>
+                  Login/Sign up
+                </h1>
               </DrawerHeader>
 
               <DrawerBody>
-                <InputGroup width='500px'>
-                  <InputLeftAddon children="+91" />
-                  <Input type="tel" placeholder="phone number" />
-                  <Button width='150px' backgroundColor='#FC2779' marginLeft='20px' >Request OTP</Button>
-                </InputGroup>
+                <Routes>
+                  <Route path="" element={<h1>Login Successfull!!</h1>} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/Register" element={<Register {...onClose } />} />
+                </Routes>
+             
+               <Outlet/>
               </DrawerBody>
 
               <DrawerFooter>
-                <Button variant="outline" mr={3} onClick={onClose}>
-                  Cancel
-                </Button>
-                <Button colorScheme="blue">Save</Button>
+                <div>
+                  Registering for this site allows you to access your order
+                  status and history. Just fill in the fields below, and we'll
+                  get a new account set up for you in no time. We will only ask
+                  you for information necessary to make the purchase process
+                  faster and easier.
+                </div>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

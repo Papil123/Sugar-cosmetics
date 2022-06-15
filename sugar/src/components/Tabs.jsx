@@ -1,69 +1,95 @@
 import React, { useState } from "react";
 import styles from "./Tabs.module.css";
-import DropDownMenuSelect from "react-nested-menu-selector";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Portal,
+} from "@chakra-ui/react";
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Tabs = () => {
-  // const [hover, setHover] = useState(false);
-  // const option = {
-  //   placeholder: "Master",
-  //   options: [
-  //     {
-  //       value: "Sample-Menu",
-  //       label: "Sample-Menu",
-  //       hidden: false,
-  //       logo: "path_to_logo",
-  //       options: [
-  //         {
-  //           value: "Sample-Sub-Menu",
-  //           label: "Sample-Sub-Menu",
-  //           hidden: false,
-  //           logo: "path_to_logo",
-  //           options: [
-  //             {
-  //               value: "Sub-Menu-Option-1",
-  //               label: "Sub-Menu-Option-1",
-  //               hidden: false,
-  //               logo: "path_to_logo",
-  //             },
-  //             {
-  //               value: "Sub-Menu-Option-2",
-  //               label: "Sub-Menu-Option-2",
-  //               hidden: true,
-  //               logo: "path_to_logo",
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // };
   return (
     <div className={styles.tabs}>
       <div>
-        {/* <DropDownMenuSelect
-          values={option}
-          
-        /> */}
+        <Menu>
+          <MenuButton>MAKE UP</MenuButton>
+          <Portal>
+            <MenuList fontSize="13px">
+              <MenuItem>
+                <Link to="./Lip">LIPS</Link>
+              </MenuItem>
+              <MenuItem>EYES</MenuItem>
+              <MenuItem>FACE</MenuItem>
+            </MenuList>
+          </Portal>
+        </Menu>
       </div>
       <div>
-        <p>BRUSHES</p>
+        <Menu>
+          <MenuButton>BRUSHES</MenuButton>
+          <Portal>
+            <MenuList fontSize="13px">
+              <MenuItem>FACE BRUSHES</MenuItem>
+              <MenuItem>EYES BRUSHES</MenuItem>
+            </MenuList>
+          </Portal>
+        </Menu>
       </div>
       <div>
-        <p>SKINCARE</p>
+        <Menu>
+          <MenuButton>SKINCARE</MenuButton>
+          <Portal>
+            <MenuList fontSize="13px">
+              <MenuItem>MOISTURIZER</MenuItem>
+              <MenuItem>SUNSCREEN</MenuItem>
+              <MenuItem>SETTING MISTS</MenuItem>
+              <MenuItem>COFFEE CULTURE RANGE</MenuItem>
+              <MenuItem>SHEET MASK COMBO</MenuItem>
+              <MenuItem>CITRUS GOT REAL</MenuItem>
+              <MenuItem>AQUAHOLIC RANGE</MenuItem>
+              <MenuItem>MASKS</MenuItem>
+            </MenuList>
+          </Portal>
+        </Menu>
       </div>
       <div>
-        <p>TRENDING</p>
+        <Menu>
+          <MenuButton>TRENDING</MenuButton>
+          <Portal>
+            <MenuList fontSize="13px">
+              <MenuItem>SUGAR MERCH STATION</MenuItem>
+              <MenuItem>MAKEUP KITS</MenuItem>
+              <MenuItem>BESTSELLERS</MenuItem>
+              <MenuItem>SUGAR SETS</MenuItem>
+              <MenuItem>VALUE SETS</MenuItem>
+            </MenuList>
+          </Portal>
+        </Menu>
       </div>
       <div>
-        <p>BLOGS</p>
+        <Menu>
+          <MenuButton>BLOGS</MenuButton>
+          <Portal>
+            <MenuList fontSize="13px">
+              <MenuItem>FEATURED</MenuItem>
+              <MenuItem>MAKEUP</MenuItem>
+              <MenuItem>SKINCARE</MenuItem>
+            </MenuList>
+          </Portal>
+        </Menu>
       </div>
       <div>
         <p>OFFERS</p>
       </div>
       <div>
-        <p>STORIES</p>
+        <p>STORES</p>
       </div>
     </div>
   );
