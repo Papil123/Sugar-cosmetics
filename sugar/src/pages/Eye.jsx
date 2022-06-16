@@ -7,7 +7,7 @@ const Lip = () => {
   const [data, setData] = useState([]);
   useEffect( () => {
     const getdata = async()=>{
-        let res = await fetch("http://localhost:8080/Lips") 
+        let res = await fetch("http://localhost:8080/eye") 
         let d = await res.json()
         setData(d)
     }

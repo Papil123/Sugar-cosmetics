@@ -1,0 +1,23 @@
+.main{
+    margin: auto;
+    justify-content: center;
+}
+
+.card{
+    display: grid;
+    margin: auto;
+    width: 70%;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.empty>img{
+    margin: auto;
+  }
+  .modal{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
+  .modal>div{
+    width: 150px;
+  }

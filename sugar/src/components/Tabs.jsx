@@ -25,8 +25,8 @@ const Tabs = () => {
               <MenuItem>
                 <Link to="./Lip">LIPS</Link>
               </MenuItem>
-              <MenuItem>EYES</MenuItem>
-              <MenuItem>FACE</MenuItem>
+              <MenuItem><Link to='./eye' >EYES</Link></MenuItem>
+              <MenuItem><Link to='./face' >FACE</Link></MenuItem>
             </MenuList>
           </Portal>
         </Menu>
